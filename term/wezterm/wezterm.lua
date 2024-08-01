@@ -2,8 +2,8 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.font = wezterm.font_with_fallback({
-	{ family = "SauceCodePro Nerd Font", weight = "Medium" },
-	"Noto Sans CJK SC", -- Require: noto-fonts-cjk
+    { family = "VictorMono Nerd Font", weight = "Medium" },
+    "Noto Sans CJK SC", -- Require: noto-fonts-cjk
 })
 config.font_size = 14
 config.command_palette_font_size = config.font_size * 1.1
@@ -19,13 +19,13 @@ config.enable_wayland = true
 
 -- https://github.com/nekowinston/wezterm-bar
 require("plugin.bar").apply_to_config(config, {
-	position = "top",
+    position = "top",
 })
 
 -- https://github.com/catppuccin/wezterm
 require("plugin.catppuccin").apply_to_config(config, {
-	sync = true,
-	sync_flavors = { light = "mocha", dark = "mocha" },
+    sync = true,
+    sync_flavors = { light = "mocha", dark = "mocha" },
 })
 
 require("config.keys").apply(config)

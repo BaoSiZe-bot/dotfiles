@@ -52,8 +52,8 @@
 #waybar {
     background: @crust;
     color: @text;
-    font-family: SauceCodePro Nerd Font;
-    font-size: 17px;
+    font-family: VictorMono Nerd Font;
+    font-size: 12px;
 }
 
 

@@ -7,9 +7,9 @@ opacity = 1.0
 
 [font]
 size = 14.0
-normal = { family = "SauceCodePro Nerd Font" }
-bold = { family = "SauceCodePro Nerd Font" }
-italic = { family = "SauceCodePro Nerd Font" }
+normal = { family = "VictorMono Nerd Font" }
+bold = { family = "VictorMono Nerd Font" }
+italic = { family = "VictorMono Nerd Font" }
 
 [mouse]
 hide_when_typing = true
