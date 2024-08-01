@@ -4,7 +4,7 @@
  *******************************************************/
 
 configuration {
-    font:   "Sans 16";
+    font:   "VictorMono Nerd Font 16";
 
     modi: "run,drun,window";
     icon-theme: "Oranchelo";

@@ -28,7 +28,7 @@
         "clock#time"
     ],
     "modules-right": [
-        "tray",
+        "keyboard-state",
         "bluetooth",
         "pulseaudio",
         "cpu",
@@ -185,7 +185,7 @@
             "3": " Web",
             "4": "󰇮 Mail",
             "5": "󰭹 Chat",
-            "6": "󰨞 Code",
+            "6": " Emacs",
             "7": " DB",
             "8": " Sys",
             "9": " Fun",
