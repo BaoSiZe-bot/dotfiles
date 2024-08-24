@@ -1,0 +1,15 @@
+[submodule "apps/bottom"]
+	path = apps/bottom
+	url = https://github.com/catppuccin/bottom
+[submodule "apps/gitui"]
+	path = apps/gitui
+	url = https://github.com/catppuccin/gitui
+[submodule "apps/yazi"]
+	path = apps/yazi
+	url = https://github.com/catppuccin/yazi
+[submodule "apps/zsh-syntax-highlighting"]
+	path = apps/zsh-syntax-highlighting
+	url = https://github.com/catppuccin/zsh-syntax-highlighting
+[submodule "apps/nvim"]
+	path = apps/nvim
+	url = https://github.com/baosize-bot/nvim

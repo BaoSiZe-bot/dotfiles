@@ -6,10 +6,10 @@ import = [
 opacity = 1.0
 
 [font]
-size = 14.0
-normal = { family = "VictorMono Nerd Font" }
-bold = { family = "VictorMono Nerd Font" }
-italic = { family = "VictorMono Nerd Font" }
+size = 12.0
+normal = { family = "Maple Mono NF" }
+bold = { family = "Maple Mono NF" }
+italic = { family = "Maple Mono NF" }
 
 [mouse]
 hide_when_typing = true

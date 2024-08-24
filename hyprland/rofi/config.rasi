@@ -4,12 +4,11 @@
  *******************************************************/
 
 configuration {
-    font:   "VictorMono Nerd Font 16";
-
+    font:   "Maple Mono NF 16";
     modi: "run,drun,window";
-    icon-theme: "Oranchelo";
+    icon-theme: "Vivid";
     show-icons: true;
-    terminal: "wezterm";
+    terminal: "kitty";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;

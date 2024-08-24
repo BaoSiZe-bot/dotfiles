@@ -1,118 +1,71 @@
-export ZSH="$HOME/.oh-my-zsh"
-
-ZSH_THEME="robbyrussell"
-
-export PATH=$PATH:$HOME/dev/bin
-export PATH=$PATH:$HOME/go/bin
-export PATH=$PATH:$HOME/.cargo/bin
-
-plugins=(
-	# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-	zsh-autosuggestions
-
-	# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-	zsh-syntax-highlighting
-
-	macos
-	vi-mode
-	fzf
-	golang
-	docker
-	rust
-)
-
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6a687a"
-
-source $ZSH/oh-my-zsh.sh
-
-bindkey '^E' end-of-line
-
-autoload bashcompinit
-bashcompinit
-
-export TERM=xterm-256color
-
-alias gs="git status"
-alias gl="git pull"
-alias gp="git push"
-alias gpf="git push -f origin"
-alias gps="git push --set-upstream origin"
-alias gck="git checkout"
-alias gr="git restore"
-alias gm="git merge"
-alias gcb="git checkout -b"
-alias gd="git diff"
-alias ga="git add"
-alias gc="git commit"
-
-alias k="kubectl"
-alias cg="cargo"
-alias tm='tmux'
-
-if command -v vim &> /dev/null; then
-	alias vi=$(which vim)
-fi
-
-if command -v nvim &> /dev/null; then
-	alias vim='nvim'
-	export EDITOR='nvim'
-else
-	export EDITOR='vim'
-fi
-
-if command -v starship &> /dev/null; then
-	eval "$(starship init zsh)"
-fi
-
-if command -v bat &> /dev/null; then
-	export BAT_THEME="catppuccin-mocha"
-fi
-
-if command -v btm &> /dev/null; then
-	alias top="btm"
-fi
-
-if command -v duf &> /dev/null; then
-	alias df="duf"
-fi
-
-if command -v exa &> /dev/null; then
-	alias ls="exa"
-fi
-
-if command -v dust &> /dev/null; then
-	alias du="dust -b"
-fi
-
-if command -v fzf &> /dev/null; then
-	export FZF_DEFAULT_OPTS=" \
---height 80% \
---reverse \
---border \
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
-fi
+alias pu='paru'
+alias ls='lsd'
+alias lsbk='sudo timeshift --btrfs --list --snapshot-device /dev/sda2'
+alias ipu='paru -S'
+alias spu='paru -Ss'
+alias qpu='paru -Q'
+alias cpu='paru -c'
+alias rpu='paru -R'
+alias trs='trans -e bing'
+# key bindings# Fix numeric keypad  
+# 0 . Enter  
+bindkey -s "^[Op" "0"
+bindkey -s "^[On" "."
+bindkey -s "^[OM" "^M"
+# 1 2 3  
+bindkey -s "^[Oq" "1"
+bindkey -s "^[Or" "2"
+bindkey -s "^[Os" "3"
+# 4 5 6  
+bindkey -s "^[Ot" "4"
+bindkey -s "^[Ou" "5"
+bindkey -s "^[Ov" "6"
+# 7 8 9  
+bindkey -s "^[Ow" "7"
+bindkey -s "^[Ox" "8"
+bindkey -s "^[Oy" "9"
+# + - * /  
+bindkey -s "^[Ol" "+"
+bindkey -s "^[Om" "-"
+bindkey -s "^[Oj" "*"
+bindkey -s "^[Oo" "/"
 
-alias docker="sudo docker"
-
-if [ -f $HOME/.secrets ]; then
-	source $HOME/.secrets
-fi
-
-if [ -f $HOME/.zshrc_custom.zsh ]; then
-	source $HOME/.zshrc_custom.zsh
-fi
-
-if command -v roxide &> /dev/null; then
-	source <(roxide init zsh)
-	alias zz="rox home"
-fi
-
-if command -v kser &> /dev/null; then
-	source <(kser init zsh)
-fi
-
-if command -v google-chrome-stable &> /dev/null; then
-	export BROWSER='google-chrome-stable'
-fi
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char
+# key bindings
+bindkey "e[1~" beginning-of-line
+bindkey "e[4~" end-of-line
+bindkey "e[5~" beginning-of-history
+bindkey "e[6~" end-of-history
+bindkey "e[3~" delete-char
+bindkey "e[2~" quoted-insert
+bindkey "e[5C" forward-word
+bindkey "eOc" emacs-forward-word
+bindkey "e[5D" backward-word
+bindkey "eOd" emacs-backward-word
+bindkey "ee[C" forward-word
+bindkey "ee[D" backward-word
+bindkey "^H" backward-delete-word
+# for rxvt
+bindkey "e[8~" end-of-line
+bindkey "e[7~" beginning-of-line
+# for non RH/Debian xterm, can't hurt for RH/DEbian xterm
+bindkey "eOH" beginning-of-line
+bindkey "eOF" end-of-line
+# for freebsd console
+bindkey "e[H" beginning-of-line
+bindkey "e[F" end-of-line
+# completion in the middle of a line
+bindkey '^i' expand-or-complete-prefix
+export RUSTUP_DIST_SERVER="https://rsproxy.cn"
+export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
+export PATH=~/.cargo/bin:$PATH
