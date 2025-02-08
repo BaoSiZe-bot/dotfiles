@@ -15,8 +15,6 @@
 
     "position": "top",
 
-    "opacity": 0.5,
-
     // If height property would be not present, it'd be calculated dynamically
     "height": 40,
 
@@ -31,7 +29,6 @@
     ],
     "modules-right": [
         "tray",
-        "keyboard-state",
         "bluetooth",
         "pulseaudio",
         "cpu",
@@ -185,10 +182,10 @@
         "format-icons": {
             "1": " Term",
             "2": " Nvim",
-            "3": " Web",
-            "4": "󰇮 Mail",
+            "3": "󰨞 Code",
+            "4": " Web",
             "5": "󰭹 Chat",
-            "6": " Emacs",
+            "6": "󰇮 Mail",
             "7": " DB",
             "8": " Sys",
             "9": " Fun",

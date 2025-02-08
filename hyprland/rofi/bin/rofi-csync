@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -e
+
+source "$HOME/.secrets"
+
+csync select -c 'rofi -i -dmenu -p "󰅍  Clipboard"' -d

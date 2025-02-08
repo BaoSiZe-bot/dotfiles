@@ -1,4 +1,4 @@
-font="VictorMono Nerd Font 14"
+font="SauceCodePro Nerd Font 14"
 
 padding=10
 
@@ -17,4 +17,7 @@ progress-color=over #313244
 border-color=#fab387
 
 [flameshot]
+ignore=1
+
+[fcitx5]
 ignore=1

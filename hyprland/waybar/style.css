@@ -10,7 +10,7 @@
  * Keyframes
  * -------------------------------------------------------------------------- */
 
-@import "mocha.css";
+@import "frappe.css";
 
 @keyframes blink-warning {
     70% {
@@ -52,8 +52,8 @@
 #waybar {
     background: @crust;
     color: @text;
-    font-family: VictorMono Nerd Font;
-    font-size: 12px;
+    font-family: SauceCodePro Nerd Font;
+    font-size: 17px;
 }
 
 
