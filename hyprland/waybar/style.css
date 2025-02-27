@@ -46,13 +46,14 @@
     min-height: 0;
     margin: 0;
     padding: 0;
+    background: transparent;
 }
 
 /* The whole bar */
 #waybar {
-    background: @crust;
+    background: transparent;
     color: @text;
-    font-family: SauceCodePro Nerd Font;
+    font-family: LXGW WenKai Mono Nerd Font;
     font-size: 17px;
 }
 
@@ -70,7 +71,7 @@
 #keyboard-state,
 #custom-fcitx5,
 #submap,
-#custom-icon,
+#custom-launcher,
 #bluetooth {
     margin: 5px;
     padding-left: 10px;
@@ -107,14 +108,14 @@
     animation-name: blink-critical;
     animation-duration: 2s;
 }
-
 #clock {
+    margin: 5px;
     padding-left: 10px;
     padding-right: 10px;
-
+    border-radius: 1rem;
     font-weight: bold;
+    background: @surface0;
 }
-
 #cpu {
     color: @base;
     background-color: @blue;
@@ -209,9 +210,9 @@
 }
 
 #workspaces button {
-    color: @text;
-
-    /* border-top: 2px solid transparent; */
+    color: @base;
+    background-color: @mauve;
+    border-top: 2px solid transparent;
     border-radius: 0.5rem;
     margin: 5px;
 
@@ -228,7 +229,7 @@
 button:hover {
     box-shadow: none;
     text-shadow: none;
-    background: none;
+    background: transparent;
     transition: none;
 }
 
@@ -252,6 +253,6 @@ tooltip label {
     color: @text;
 }
 
-#custom-icon {
+#custom-launcher {
     background-color: @base;
 }

@@ -1,0 +1,621 @@
+ls
+cd
+exit
+cd ~/.config/nushell/
+ls
+mkdir themes
+cd themes/
+git clone https://github.com/nik-rev/catppuccin-nushell
+cd catppuccin-nushell/
+ls
+cp themes/* ../
+cd ..
+rm catppuccin-nushell/
+rm catppuccin-nushell/ -rf
+ls
+cd ..
+ls
+vim config.nu
+exit
+vim ~/.config/nushell/config.nu
+cd
+exit
+echo $env.HOME
+vim ~/.config/nushell/config.nu
+exit
+ls
+alias
+alias 
+alias d
+vim ~/.config/nushell/config.nu
+starship --nu
+starship --nushell
+starship --help
+starship init nu
+starship init nu > ~/.config/nushell/starship.nu
+starship init nu | tee ~/.config/nushell/starship.nu
+starship init nu | tee "~/.config/nushell/starship.nu"
+starship init nu
+vim $nu.config-path
+exit
+ls
+z
+vim $nu.config-path
+exit
+ls
+z
+exit
+ls
+vim ~/.config/nushell/config.nu
+config nu
+exit
+ls
+nvim
+config nu
+hx --help
+hx -g fetch
+vim .gitconfig
+ls
+exit
+hx -g fetch
+exit
+hx ~/.config/nushell/config.nu
+cd
+exit
+ls
+dsa
+exit
+qry-usr
+exit
+cd $(fdfind -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=d | fzy -l 20)
+cd (fdfind -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=d | fzy -l 20)
+ls
+cd ..
+exit
+hs
+fzy -l 20 -q ...(history)
+ee
+exit
+ls
+ee
+cd
+exit
+cd
+exit
+config-nu
+exit
+config nu
+exit
+vim ~/.config/nushell/config.nu
+exit
+c
+vim ~/.config/nushell/config.nu
+ext
+exit
+ls
+vim ~/.config/nushell/config.nu
+exit
+nu
+vim ~/.config/nushell/config.nu
+nvim ~/.config/nushell/config.nu
+exit
+fzf
+exit
+fzf
+exit
+fzf
+exit
+cargo install nufmt
+apt search nufm
+apt search nufmt
+nufmt
+ls
+exit
+cargo install --git https://github.com/nushell/nufmt
+exit
+ls
+ls -a
+ll
+nvim
+exit
+ls
+exit
+ls
+nvim
+hx
+exit
+ls
+chsh
+chsh -l
+chsh --list
+chsh --help
+cd catnap/
+cd
+au
+vim ~/.config/nushell/config.nu
+exit
+vim ~/.config/nushell/config.nu
+ls
+lx
+ls
+exit
+ls
+ls -a
+viu swappy-20250225_193432.png
+chafa -f iterm swappy-20250225_193432.png
+chafa swappy-20250225_193432.png
+viu swappy-20250225_193432.png
+exit
+poweroff
+/usr/bin/poweroff
+cat /usr/bin/poweroff
+cat /sbin/poweroff
+/sbin/poweroff
+sudo /sbin/poweroff
+nufmt
+ls
+rm test.o
+rm test
+ls
+rm zhongyq
+ls
+cd 下载
+ls
+sudo apt install code-insiders_1.98.0-1740548422_amd64.deb
+sudo apt install ./code-insiders_1.98.0-1740548422_amd64.deb
+cd ..
+nvim a.cpp
+vim .gitconfig
+nvim
+ls
+exit
+exi
+exit
+ls
+exit
+ls
+viu swappy-20250225_193432.png
+ping www.baidu.com
+git clone https://github.com/LazyVim/LazyVim
+cd LazyVim/
+ls
+gitui
+cd .cargo
+ls
+cd git/
+ls
+cd ..
+cd bin
+ls
+cd ..
+exit
+cargo install gitui
+exit
+gitui
+cd LazyVim/
+cd
+nvim
+gitui
+cd ..
+cd
+nvim
+apt search lua-ls
+exit
+ping www.baidu.com
+exit
+fish
+exit
+fzf
+cd .local
+cd share
+ls
+cd rime-ls/
+ls
+cd ..
+rm rime-ls/
+rm rime-ls/ -r
+cp fcitx5/rime/ rime-ls/
+cp fcitx5/rime/ rime-ls
+cp fcitx5/rime/ rime-ls -r
+cd rime-ls/
+ls
+cd
+nvim
+cd ~/.local/share/rime-ls/
+ls
+nvim default.yaml
+nvim
+cd
+nvim
+exit
+cd ~/.config/nvim
+ls
+gitui
+ls
+cd lua
+ls
+cd plugins/
+ls
+vim exlsp.lua
+cd ..
+nvim
+exit
+nvim
+exit
+nvim
+gh
+git
+git push
+git config get
+git config --help
+git config get global.username
+git config --help
+git config get user.name
+git config get user.name --global
+git config --global get user.name 
+git config get --globa luser.name 
+git config get --global user.name 
+cd
+git config get --global user.name 
+git config get --global user.email
+nvim
+cd
+nvim
+exit
+cd
+nvim
+rg " "
+exit
+nvim
+cd LazyVim/
+rg "persis"
+rg "persistence"
+rg ""
+vim lua/lazyvim/plugins/ui.lua
+cd ..
+cd .local/share/nvim
+l
+ls
+cd lazy/
+cd ..
+rg "persistence"
+vim lazy/snacks.nvim/lua/snacks/dashboard.lua
+cd
+nvim
+fzf
+nvim
+nvim test.cpp test.py a.cpp
+nvim
+cd LazyVim/
+rg "nvim-lspconfig"
+vim lua/lazyvim/plugins/lsp/init.lua
+cd
+nvim
+cd LazyVim/
+rg "cmpborder"
+cd ..
+nvim
+ls
+bat abalonecode.code-profile
+~/.cargo/bin/bat abalonecode.code-profile
+cat abalonecode.code-profile
+vim abalonecode.code-profile
+lite-xl
+exit
+cd ~/.config/zellij/
+l
+ls
+rm config.kdl.bak
+ls
+cd ~/config/zellij/
+ls
+vim layout.kdl
+vim layoutnew.kdl
+vim layoutnow1.kdl
+cd ..
+rm zellij -rf
+ls
+w 
+ls
+vim kitty/kitty.conf
+vim kitty/kitty_layout.conf
+rm kitty -rf
+vim eww/eww.yuck
+ls
+cd mako/
+cd ..
+vim ~/.config/nushell/config.nu
+ls
+vim ~/.config/nushell/config.nu
+exit
+exit
+vim ~/.config/nushell/config.nu
+exit
+ls
+cd dotfiles/hyprland/mako
+ls
+ls
+notify-send das
+exit
+nvim config
+nvim config
+cd ..
+rm mako -rf
+ls
+ls
+cd ..
+exit
+apt search hyprlock
+ls
+pip install pyprland
+ls
+cd foot/
+ls
+vim foot.ini
+cd ..
+rm foot -rf
+ls
+vim waybar/config.ini
+ls
+vim hypr/cleanup_after_start.sh
+cd /usr
+apt search gnome | rg agent
+apt search gnome | rg polkit
+vim hypr/hyprland.conf
+exit
+nvim ~/.config/hypr/conf.d/exec.conf
+cd ..
+cd dotfiles/
+nvim hypr/hyprland.conf
+ls
+cd hypr/
+ls
+cd ..
+rm hypr -rf
+ls
+nvim
+exit
+vim mpd/mpd.conf
+ls
+ls ~/.config
+ls
+mv mpd ~/.config/
+mv mpv ~/.config/
+mv ncmpcpp ~/.config/
+ls
+rm lite-xl -rf
+ls
+ls ~/.config
+btm
+ls
+ls ~/.config
+ls
+mv conky ~/.config/
+ls ~/.config
+mv eww ~/.config/
+ls
+ls ~/.config
+mv xava ~/.config/
+ls
+cd wlogout/
+ls
+cd ..
+ls
+cd ..
+cd dotfiles/
+exit
+cd ..
+cd ~/.config/ulauncher/
+cd ulauncher/
+ls
+vim extensions.json
+vim extensions.json
+vim settings.json
+vim settings.json
+nvim settings.json
+exit
+nvim settings.json
+cd ..
+rm ulauncher/ -rf
+ls
+cd waybar/
+ls
+cd ~/.config/waybar
+ls
+vim config.jsonc
+vim config.ini
+nvim config.jsonc
+nvim config.ini
+ls
+vim config_wayfire_now.ini
+vim style.css
+exit
+vim style.css
+waybar
+vim style.css
+waybar
+vim config.jsonc
+waybar
+vim config.jsonc
+waybar
+vim config.jsonc
+waybar
+vim config.jsonc
+vim style.css
+waybar
+vim style.css
+waybar
+vim config.jsonc
+waybar
+vim style.css
+waybar
+vim style.css
+vim frappe.css
+waybar
+vim frappe.css
+vim style.css
+waybar
+vim style.css
+waybar
+vim config.jsonc
+waybar
+vim config.jsonc
+vim style.css
+waybar
+vim style.css
+waybar
+vim style.css
+waybar
+vim style.css
+waybar
+vim style.css
+waybar
+vim style.css
+waybar
+vim style.css
+waybar
+vim style.css
+waybar
+vim style.css
+waybar
+exit
+ls
+cd modules/
+ls
+cd ..
+vim scripts/waybar-wttr.py
+cd ..
+rm waybar/ r-f
+rm waybar/ -rf
+ls
+cd wlogout/
+ls
+cd ..
+cd ~/.config
+fzf
+cd ~/config
+mv wlogout ~/.config/
+ls
+cd ..
+cd ~/.config
+ls
+rm starfish.toml
+ls
+mv ulauncher/ ~/dotfiles/apps/
+ln -s ~/dotfiles/apps/ulauncher/ ~/.config/
+ls
+mv mpd/ ~/dotfiles/apps/
+mv mpv/ ~/dotfiles/apps/
+ln -s ~/dotfiles/apps/mpd/ ~/.config/
+ln -s ~/dotfiles/apps/mpv/ ~/.config/
+ls
+mv fish/ ~/dotfiles/apps/
+ls
+nwg-hello 
+ls
+cd catnap/
+ls
+cd ..
+ls
+mv catnap/ ~/dotfiles/apps/
+mv helix/ ~/dotfiles/apps/
+ln -s ~/dotfiles/apps/catnap/ ~/.config/
+ln -s ~/dotfiles/apps/helix/ ~/.config/
+catnap
+hx
+ls
+cd KDE/
+ls
+cd ..
+ls
+cd  kde.org/
+ls
+cd ..
+ls
+vim gtkrc
+ls
+mv zellij/ ~/dotfiles/apps/
+ln -s ~/dotfiles/apps/zellij/ ~/.config/
+exit
+ls
+cd .config
+ls
+mv lite-xl/ ~/dotfiles/apps/
+ln -s ~/dotfiles/apps/lite-xl/ ~/.config/
+ls
+cd lite-xl
+ls
+cd ..
+ls
+mv ironbar/ ~/dotfiles/apps/
+ln -s ~/dotfiles/apps/ironbar/ ~/.config/
+ls
+fish
+ls
+exit
+ls
+fish
+ls
+fish
+ls
+cd systemd/
+ls
+cd user/
+ls
+cd ..
+ls
+vim gtkrc-2.0
+ls
+mv conky/ ~/dotfiles/apps/
+ln -s ~/dotfiles/apps/conky/ ~/.config/
+ls
+cd dconf/
+ls
+vim user
+dust
+cd ..
+ls
+rm deepin -rf
+ls
+mv eww/ ~/dotfiles/apps/
+ln -s ~/dotfiles/apps/eww/ ~/.config/
+ls
+cd eww
+cd ..
+ls
+cd eww
+cd ..
+s
+ls
+Ls
+ls
+mv qt5ct ~/dotfiles/apps/
+cd ~/dotfiles/apps/qt5ct/
+ls
+vim qt5ct.conf
+cd ..
+rm qt5ct/ -rf
+vim ~/.config/qt5ct/qt5ct.conf
+ls
+exit
+ls
+cd ~/.config
+ls
+mv qt5ct ~/dotfiles/apps/
+ln -s ~/dotfiles/apps/qt5ct/ ~/.config/
+ls
+cd nwg-bar/
+ls
+cd ..
+cd nwg-displays/
+ls
+cd ..
+cd nwg-look/
+ls
+vim config
+cd ..
+ls
+dust
+ls
+cd ~/dotfiles/
+nvim

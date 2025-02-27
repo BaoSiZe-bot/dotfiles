@@ -19,17 +19,18 @@
     "height": 40,
 
     "modules-left": [
-        // "custom/icon",
+        "custom/launcher",
         "hyprland/submap",
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "hyprland/window"
     ],
     "modules-center": [
         "clock#date",
         "clock#time"
     ],
     "modules-right": [
+        //"hyprland/language",
         "tray",
-        "bluetooth",
         "pulseaudio",
         "cpu",
         "temperature",
@@ -43,6 +44,37 @@
     // Modules
     // -------------------------------------------------------------------------
 
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 25,
+        "rewrite": {
+            "(.*) - Chromium": "🌎 $1",
+            "(.*) - Mozilla Firefox": "🌎 $1",
+            "(.*) - Thunar": " $1",
+            "(.*) - mpv": " $1",
+            "(.*) - fish": " [$1]",
+            "(.*) - wezterm": " [$1]",
+            "(.*) - kitty": " [$1]",
+            "(.*) - nautilus": " $1",
+            "(.*) - Alacritty": " $1"
+        },
+        "separate-outputs": true
+    },
+    "custom/launcher": {
+        "format": "",
+        "on-click": "ulauncher-toggle",
+        "tooltip": "Ulauncher"
+    },
+    "hyprland/language": {
+        "format": " {}",
+        "format-en": "en",
+        "format-fr": "fr",
+        "format-zh": "zh",
+        "format-cn": "cn",
+        "format-us": "us",
+        "on-click": "hyprctl switchxkblayout logitech-craft next",
+        "keyboard-name": "logitech-craft"
+    },
     "clock#date": {
         "interval": 10,
         "format": "{:%a %b %e %Y}", // Icon: calendar-alt
@@ -119,8 +151,8 @@
         "interval": 1,
         "format": "{icon} {usage:3}%", // Icon: microchip
         "states": {
-          "warning": 20,
-          "critical": 50
+            "warning": 20,
+            "critical": 50
         },
         "format-icons": [
             "󰄛",

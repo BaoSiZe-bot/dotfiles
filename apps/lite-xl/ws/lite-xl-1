@@ -1,0 +1,1 @@
+return { path = "/home/noilinux/.config/lite-xl", documents = {["type"]="leaf",["active_view"]=1,["views"]={[1]={["scroll"]={["y"]=0,["x"]=0,["to"]={["x"]=0,["y"]=0}},["type"]="view",["module"]="core.emptyview",["active"]=true}}}, directories = {} }

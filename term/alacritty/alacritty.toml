@@ -1,12 +1,22 @@
+[terminal.shell]
+program = "/usr/bin/bash"
+args = [
+    "-l",
+    "-c",
+    "/home/noilinux/.cargo/bin/zellij attach --index 0 || /home/noilinux/.cargo/bin/zellij"
+]
+
+[env]
+TERM="xterm-256color"
 
 [window]
-opacity = 1.0
+opacity = 0.8
 
 [font]
-size = 14.0
-normal = { family = "SauceCodePro Nerd Font" }
-bold = { family = "SauceCodePro Nerd Font" }
-italic = { family = "SauceCodePro Nerd Font" }
+size = 16
+normal = { family = "LXGWWenKaiMono Nerd Font" }
+bold = { family = "LXGWWenKaiMono Nerd Font" }
+italic = { family = "LXGWWenKaiMono Nerd Font" }
 
 [mouse]
 hide_when_typing = true
@@ -18,3 +28,6 @@ save_to_clipboard = true
 import = [
     "~/.config/alacritty/mocha.toml"
 ]
+
+[terminal]
+
