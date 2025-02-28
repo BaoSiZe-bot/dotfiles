@@ -619,3 +619,469 @@ dust
 ls
 cd ~/dotfiles/
 nvim
+cd ~/.config/
+ls
+cd helix
+ls
+cd runtime/
+ls
+cd ..
+ls
+cd runtime/
+cd grammars/
+ls
+cd sources/
+ls
+cd ..
+hx --help
+hx -g build
+nvim a.cpp
+nvim --help
+nvim a.cpp a.log --startuptime a.log
+nvim
+nvim a.cpp a.log --startuptime a.log
+nvim
+rm a.log
+nvim a.cpp a.log --startuptime a.log
+nvim a.cpp
+exit
+cd
+catnap
+ls
+viu QQͼƬ20250227105744.jpg
+ls
+chafa QQͼƬ20250227105744.jpg
+rm QQͼƬ20250227105744.jpg
+exit
+$nu.env-path
+$nu.config-path
+$nu.startup-time
+exit
+fish
+time nu -c exit
+time fish -c exit
+exit
+cargo update
+exit
+cd dotfiles/
+ls
+cd ..
+cd .cargo/
+ls
+cargo update
+cargo
+cargo --list
+ls
+cd registry/
+ls
+cd ..
+cargo search --registry crates-io dust
+cargo search --registry crates-io zed
+cargo search --registry crates-io zed --limit 50
+cargo search --registry crates-io zed --limit 200 | fzf
+cargo search --registry crates-io zed --limit 200 | fzy
+apt search zed
+flatpak
+flatpak --help
+flatpak update
+ls
+exit
+flatpak search zed
+nvim
+exit
+cargo install --git https://github.com/zed-industries/zed
+git clone https://github.com/zed-industries/zed --depth 1
+cd zed
+cargo install .
+cargo install --path .
+cargo run
+ls
+cargo install cargo-update
+./script/install-linux
+apt search alsa-dev
+sudo apt install librust-alsa-dev
+./script/install-linux
+cargo install cargo-update
+cargo-install-update
+cargo install-update
+cargo install-update --all
+cargo install-update --all --locked
+rm /tmp/cargo-install*
+sudo rm /tmp/cargo-install*
+sudo rm /tmp/cargo-install* -r
+cargo install-update --all --locked
+exit
+./script/install-linux
+btm
+exit
+exit
+cd zed
+ls
+cd zed
+ls -a
+cd .cargo
+ls
+cd zed
+ls
+vim ~/.config/mako/config
+exit
+btm
+flatpak remove zed
+flatpak list
+flatpak remove org.gnome.Platform
+flatpak remove org.gtk.Gtk3theme.Yaru-dark
+flatpak remove org.freedesktop.Sdk
+flatpak list
+flatpak remove org.freedesktop.Platform.VAAPI.Intel
+flatpak list
+apt search dconf
+flatpak remove dconf
+flatpak list
+sudo apt install dconf-editor
+flatpak remove *
+flatpak remove Yaru-dark
+flatpak remove flatform
+flatpak remove platform
+flatpak list
+ls
+vim Sudoku
+rm Sudoku
+cd ~/.config
+ls
+cd
+cargo search github
+cargo install-update yazi-fm
+ya
+yazi
+git clone https://github.com/catppuccin/yazi --depth 1
+cd yazi
+ls
+cd themes/
+ls
+cd frappe/
+cargo install bat
+vim ~/.cargo/config.toml
+cargo install bat
+vim ~/.cargo/config.toml
+nvim ~/.cargo/config.toml
+cargo install bat
+exit
+cd ..
+ls
+cd ..
+ls
+vim README.md
+mkdir ~/.config/yazi;cp themes/frappe/catppuccin-frappe-mauve.toml ~/.config/yazi/
+cd ~/.config/yazi
+mv catppuccin-frappe-mauve.toml theme.toml
+vim theme.toml
+cd ..
+vim yazi/README.md
+rm yazi -rf
+git clone https://github.com/catppuccin/bat --depth 1
+cd bat
+ls
+cd themes/
+ls
+vim README.md
+ls
+cd ..
+vim README.md
+exit
+mkdir ~/.config/bat/themes -p;cp `Catppuccin Frappe.tmTheme` ~/.config/bat/themes
+mkdir -p ~/.config/bat/themes;cp `Catppuccin Frappe.tmTheme` ~/.config/bat/themes
+/usr/bin/mkdir -p ~/.config/bat/themes;cp `Catppuccin Frappe.tmTheme` ~/.config/bat/themes
+cd ~/.config/bat/
+ls
+cd themes/
+ls
+cd ..
+cd themes/
+bat --help
+bat --build-cache
+ls
+cd ..
+vim README.md
+ls
+cd ~/bat
+vim README.md
+bat cache --build
+vim README.md
+bat --theme="Catppuccin Frappe" README.md
+vim README.md
+bat README.md
+vim README.md
+vim ~/.config/bat/config
+bat README.md
+vim ~/.config/yazi/theme.toml
+yazi
+exit
+nvim a.cpp
+nvim
+exit
+viu /usr/share/backgrounds/noi_wallpaper_00.png
+viu /usr/share/backgrounds/noi_wallpaper_01.png
+viu /usr/share/backgrounds/noi_wallpaper_02.png
+viu /usr/share/backgrounds/noi_wallpaper_03.png
+viu /usr/share/backgrounds/noi_wallpaper_04.png
+viu /usr/share/backgrounds/noi_wallpaper_05.png
+zenity 
+zenity --help
+zenity --error
+nvim test.cpp
+g++ test.cpp -o test
+nvim test.cpp
+g++ test.cpp -o test -std=c++20
+nvim test.cpp
+g++ test.cpp -o test -std=c++20
+nvim test.cpp
+g++ test.cpp -o test -std=c++20
+nvim test.cpp
+g++ test.cpp -o test -std=c++20
+./test
+nvim test.cpp
+g++ test.cpp -o test -std=c++20
+./test
+nvim test.cpp
+g++ test.cpp -o test -std=c++20
+./test
+nvim test.cpp
+g++ test.cpp -o test -std=c++20
+./test
+nvim test.cpp
+g++ test.cpp -o test -std=c++20
+./test
+clang test.cpp -o test -std=c++20 -Ofast -lm
+clang test.cpp -o test -std=c++20 -Ofast
+clang test.cpp -o test -std=c++20 -O3 -ffast-math -lm
+vim test.cpp
+clang++ test.cpp -o test -std=c++23 -O3 -ffast-math -lm
+clang++ test.cpp -o test -std=c++26 -O3 -ffast-math -lm
+./test
+g++ test.cpp -o test -std=c++26 -O3 -ffast-math -lm
+./test
+au
+fish
+dust
+ls
+ls -a
+ls
+exit
+ls
+viu adwaita-l.jxl
+chafa adwaita-l.jxl
+ueberzugpp
+ls
+bash
+ls
+bat ~/.cargo/zed/assets/licenses.md
+nvim ~/.cargo/zed/assets/licenses.md
+nvim abalone.cpp
+zenity --error --title "你妈死了"
+zenity --error --title "你妈死了" --help
+exit
+fish
+bash
+ppm search jetbrains
+ppm search jetbr
+ppm search idea
+ppm install intellij-idea-dracula-ui intellij-idea-dracula-syntax
+ppm install intellij-idea-dracula-ui
+ppm install intellij-idea-dracula-ui --production 
+pip install pylsp
+pip install pylsp --break-system-packages
+pip install pylsp-mypy --break-system-packages
+pip install pyython-language-server --break-system-packages
+pip install python-language-server --break-system-packages
+python
+python3
+pip install ipython --break-system-packages
+ipython3
+python3 tle-code/a.py
+exit
+python3 tle-code/a.py
+ipython3
+ls
+cd OJBetter_Bridge/
+ls
+./server_gui.py
+exit
+cat cpp_workspace/82988651.cpp
+exit
+cd ..
+python3 ./a.py
+exit
+nvim a.py
+rm .local/share/nvim/typrstats
+nvim
+nvim a+b.cpp
+rm .local/share/nvim/typrstats
+nvim a+b.cpp
+git clone https://github.com/baosize-bot/luogu-codes
+cd luogu-codes
+dust
+gitui
+ls
+rm (fd .txt)
+./server_cli.py
+reboot
+nwg-hello
+swaylock
+bash
+fish
+exi
+exit
+ls
+cargo install-update yazi-cli
+cargo install-update --all
+nvim
+cargo install-update --all
+cargo install-update eza du-dust cargo-about
+cargo install du-dust
+ls
+ll
+Ls
+Ls | fzy
+exit
+cargo install eza
+nvim
+cargo install eza
+eza
+ls
+Ls
+fish
+apt search libstdc++
+ls
+hx
+apt search helix
+which helix
+which hx
+ls
+hx
+hx --version
+cargo install cargo-about
+sudo apt install helix
+sudo apt install hx
+apt search hx
+aptitude search hx
+exit
+ar
+sudo aptitude remove --purge-unused hx
+cargo search helix
+cargo search helix --registry crates-io
+cargo install helix-editor
+cargo install helix-term
+cargo install helix-gui
+git clone https://github.com/helix-editor/helix<\n>cd helix<\n>
+cargo install --path helix-term --locked
+cargo install --path helix-term
+cargo install --path helix-term --locked
+vim ~/.gitconfig
+cargo install --path helix-term --locked
+exit
+/usr/bin/gnome-keyring-daemon --start --components=secrets
+nvim
+chromium --password-store=gnome-libsecret
+chromium --password-store=gnome
+git clone https://github.com/bluebyt/Wayfire-dots
+git clone https://ghfast.top/github.com/bluebyt/Wayfire-dots
+git clone https://github.moeyy.xyz/https://github.com/bluebyt/Wayfire-dots
+cd Wayfire-dots/
+cd config
+ls
+vim chromium-flags.conf
+cd ..
+git clone https://github.moeyy.xyz/https://github.com/fioncat/dotfiles fioncat
+git clone https://github.com/fioncat/dotfiles fioncat
+cd fioncat
+ls
+nvim hyprland/hypr/conf.d/keybind.conf
+gitui
+cd ..
+nvim
+nvim a.cpp
+nvim
+cd
+z nvim
+cd
+ls
+nvim
+fish
+exit
+nvim snippets/cpp.json
+sudo chmod o-x /usr/sbin/systemctl
+sudo chmod o-x /usr/bin/systemctl
+reboot
+sudo chmod o-x /usr/bin/zenity
+cargo install --git https://github.com/fish-shell/fish-shell
+cargo install --git https://github.moeyy.xyz/https://github.com/fish-shell/fish-shell
+git clone https://github.moeyy.xyz/https://github.com/fish-shell/fish-shell --depth=1
+cd fish-shell/
+ls
+mkdir build
+cd build/
+cmake ..
+cmake --build .
+fish
+which fish
+sudo apt remove fish
+sudo apt install xsel
+aptitude
+sudo aptitude autoremove
+sudo apt autoremove
+cmake --install .
+sudocmake --install .
+sudo cmake --install .
+cd
+fish
+which fish
+fish
+ls
+fish
+exit
+fish
+z fish
+ls
+cd build
+cmake --build .
+cd ..
+apt search sphinx-build
+cargo install --path . --tag 4.0.0
+sudo apt search sphinx
+exit
+fish
+exit
+fish
+cd fish-shell/
+ls
+z fish
+ls
+cd debian/
+ls
+cd ..
+rm fish-shell/ -rf
+cd
+cd /usr
+cd
+echo 'deb http://download.opensuse.org/repositories/shells:/fish/Debian_Unstable/ /' | sudo tee /etc/apt/sources.list.d/shells:fish.list
+curl -fsSL https://download.opensuse.org/repositories/shells:fish/Debian_Unstable/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_fish.gpg > /dev/null
+sudo apt update
+sudo apt modernize-sources
+sudo apt update
+sudo apt install fish
+fish
+exit
+fish
+exit
+ls
+fish
+exit
+chsh
+cd dotfiles/
+ls
+rg "nu"
+rg "cargo" | rg nu
+vim ~/.config/zellij/config.kdl
+exit
+fish
+exit
