@@ -1,0 +1,1 @@
+/home/fujiwara/softwares/helix/contrib/completion/hx.fish

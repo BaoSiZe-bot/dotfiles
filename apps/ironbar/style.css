@@ -1,5 +1,5 @@
 .container {
-    font-family: LXGW WenKai Mono Nerd Font;
+    font-family: JetbrainsMono Nerd Font;
     /*  font-family: CaskaydiaCove Nerd Font; */
     /*  font-weight: bold; */
     font-size: 18px;
@@ -8,7 +8,7 @@
 .cava {
     padding: 0px 20px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 8px;
     border-radius: 10px;
     color: #7dcfff;
@@ -24,7 +24,7 @@
 .wlogout {
     padding: 0px 15px 0px 10px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 8px;
     border-radius: 10px;
     color: #ff757f;
@@ -43,7 +43,7 @@
 .airpod {
     padding: 0px 15px 0px 10px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 8px;
     border-radius: 10px;
     color: #ff757f;
@@ -63,7 +63,7 @@
 .sysinfo .item:nth-child(1) {
     padding: 0px 10px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 0px;
     border-radius: 10px;
     color: #ff9e64;
@@ -75,7 +75,7 @@
 .sysinfo .item:nth-child(2) {
     padding: 0px 10px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 0px;
     border-radius: 10px;
     color: #7dcfff;
@@ -87,7 +87,7 @@
 .sysinfo .item:nth-child(3) {
     padding: 0px 10px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 0px;
     border-radius: 10px;
     color: #bb9af7;
@@ -99,7 +99,7 @@
 .sysinfo .item:nth-child(4) {
     padding: 0px 10px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 10px;
     border-radius: 10px;
     color: #9ece6a;
@@ -110,7 +110,7 @@
 .pacman {
     padding: 0px 10px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 10px;
     border-radius: 10px;
     color: #c3e88d;
@@ -121,7 +121,7 @@
 .zellij {
     padding: 0px 7px 0px 9px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 8px;
     border-radius: 10px;
     color: #c3e88d;
@@ -140,7 +140,7 @@
 .volume {
     padding: 0px 10px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 10px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
@@ -162,7 +162,7 @@
 .kbdd {
     padding: 0px 10px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 8px;
     border-radius: 10px;
     color: #ff9e64;
@@ -174,7 +174,7 @@
 .clock {
     font-family: CaskaydiaCove Nerd Font;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 10px;
     margin-left: 10px;
     padding-right: 10px;
@@ -223,7 +223,7 @@
 .focused {
     padding: 0px 10px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 8px;
     margin-left: 8px;
     border-radius: 10px;
@@ -237,7 +237,7 @@
 .clipboard {
     padding: 0px 10px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 8px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
@@ -268,7 +268,7 @@
 .work9 {
     padding: 0px 5px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 3px;
     border-radius: 10px;
     color: #ff9e64;
@@ -280,7 +280,7 @@
 .work2 {
     padding: 0px 10px 0px 10px; 
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 3px;
     border-radius: 10px;
     color: #c3e88d;
@@ -309,7 +309,7 @@
 .script {
     padding: 0px 10px 0px 10px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 8px;
     margin-left: 8px;
     border-radius: 10px;
@@ -332,7 +332,7 @@
     border-radius: 10px;
     padding: 0px 10px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 7px;
     margin-left: 10px;
     color: #bb9af7;
@@ -344,7 +344,7 @@
     border-radius: 10px;
     padding: 0px 10px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 7px;
     margin-left: 10px;
     color: #bb9af7;
@@ -396,7 +396,7 @@ tooltip * {
     background: #1a1b26;
     padding: 5px 5px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-right: 10px;
     margin-left: 10px;
     border-radius: 10px;

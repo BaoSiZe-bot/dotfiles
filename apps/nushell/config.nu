@@ -21,6 +21,7 @@ source ~/.config/nushell/themes/catppuccin_frappe.nu
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 zoxide init nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
+# fnm env --use-on-cd --shell  | source
 $env.config.buffer_editor = "hx"
 $env.config.show_banner = false
 $env.config.edit_mode = 'vi'
@@ -30,26 +31,28 @@ use std/util "path add"
 path add "~/.local/bin"
 path add "~/.cargo/bin"
 path add "~/.bin"
-alias fd = fd -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=f | fzy -l 20
-alias Z = cd (fd -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=d | fzy -l 20)
-alias oe = xdg-open (fd -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=f | fzy -l 20)
-alias ee = hx (fd -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=f | fzy -l 20)
-# alias hs = fzy -l 20 -q (history)
+path add "~/.config/doomemacs/bin"
+path add "~/.local/share/lvim/mason/bin"
+path add "/home/linuxbrew/.linuxbrew/bin"
+def ff [] { ~/.cargo/bin/fd -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=f | fzy -l 20 }
+alias Z = cd (ff)
+alias oe = xdg-open (ff)
+alias ee = nvim (ff)
+def hs [] { history | get command | str join "\n" | fzy -l 20 }
 alias p = paru
 alias ps = paru -S
 alias pl = paru -Ql
-alias pr = paru -R' #To remove a package and its dependencies
-alias pR = paru -Rs' #To remove a package and its dependencies
-alias pq = paru -Qs' #To search for already installed packages
-alias pi = paru -Qi' #To display information about locally installed packages
-alias par = paru -c'  # remove orphaned packages
-alias pc = paru -Scc' #removing old packages from cache
+alias pr = paru -R #To remove a package and its dependencies
+alias pR = paru -Rs #To remove a package and its dependencies
+alias pq = paru -Qs #To search for already installed packages
+alias pi = paru -Qi #To display information about locally installed packages
+alias par = paru -c  # remove orphaned packages
+alias pc = paru -Scc #removing old packages from cache
 alias a = aptitude
 alias as = sudo aptitude install
 alias al = apt list --installed
 alias ar = sudo apt remove --purge
-alias aR = sudo aptitude remove --purge-unused' #aptitude will remove package's dependencies automatically
-alias aq = apt list --installed | rg ""
+alias aR = sudo aptitude remove --purge-unused #aptitude will remove package's dependencies automatically
 alias ai = apt-cache policy
 alias aar = sudo apt autoremove
 alias ac = sudo rm /var/cache/apt/archives/*
@@ -70,74 +73,4 @@ alias t1 = eza --icons=always --tree --color=always --level=1
 alias t2 = eza --icons=always --tree --color=always --level=2
 alias t3 = eza --icons=always --tree --color=always --level=3
 
-# Directories
-const alt_c = {
-    name: fzf_dirs
-    modifier: alt
-    keycode: char_c
-    mode: [emacs, vi_normal, vi_insert]
-    event: [
-      {
-        send: executehostcommand
-        cmd: "
-          let fzf_alt_c_command = \$\"fd -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=d | fzy -l 20 \";
-          let result = nu -c $fzf_alt_c_command;
-          cd $result;
-        "
-      }
-    ]
-}
-
-# History
-const ctrl_r = {
-  name: history_menu
-  modifier: control
-  keycode: char_r
-  mode: [emacs, vi_insert, vi_normal]
-  event: [
-    {
-      send: executehostcommand
-      cmd: "
-        let result = history
-          | get command
-          | str replace --all (char newline) ' '
-          | to text
-          | fzy -l 20;
-        commandline edit --append $result;
-        commandline set-cursor --end
-      "
-    }
-  ]
-}
-
-# Files
-const ctrl_t =  {
-    name: fzf_files
-    modifier: control
-    keycode: char_t
-    mode: [emacs, vi_normal, vi_insert]
-    event: [
-      {
-        send: executehostcommand
-        cmd: "
-          let fzf_ctrl_t_command = \$\"fd -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=f | fzy -l 20\";
-          let result = nu -c $fzf_ctrl_t_command;
-          commandline edit --append $result;
-          commandline set-cursor --end
-        "
-      }
-    ]
-}
-
-# Update the $env.config
-export-env {
-  if not ($env.__keybindings_loaded? | default false) {
-    $env.__keybindings_loaded = true
-    $env.config.keybindings = $env.config.keybindings | append [
-      $alt_c
-      $ctrl_r
-      $ctrl_t
-    ]
-  }
-}
 catnap

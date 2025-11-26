@@ -1,0 +1,1 @@
+/home/fujiwara/softwares/swww/completions/swww.fish

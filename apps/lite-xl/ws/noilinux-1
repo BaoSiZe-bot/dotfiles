@@ -1,1 +1,0 @@
-return { path = "/home/noilinux", documents = {["views"]={[1]={["active"]=true,["module"]="core.emptyview",["type"]="view",["scroll"]={["to"]={["y"]=0,["x"]=0},["y"]=0,["x"]=0}}},["type"]="leaf",["active_view"]=1}, directories = {} }

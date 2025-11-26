@@ -9,15 +9,15 @@
 ##############################################
 [stats]
 username  = {icon = " ", name = "user", color = "(RD)"}
-#hostname  = {icon = " ", name = "hostname", color = "(YW)"}
-#uptime    = {icon = " ", name = "uptime", color = "(BE)"}
-#distro    = {icon = " ", name = "distro", color = "(GN)"}
+hostname  = {icon = " ", name = "hostname", color = "(YW)"}
+uptime    = {icon = " ", name = "uptime", color = "(BE)"}
+distro    = {icon = " ", name = "distro", color = "(GN)"}
 kernel    = {icon = " ", name = "kernel", color = "(MA)"}
 desktop   = {icon = " ", name = "desktop", color = "(CN)"}
 terminal  = {icon = " ", name = "term", color = "(RD)"}
 shell     = {icon = " ", name = "shell", color = "(MA)"}
-#packages  = {icon = " ", name = "packages", color = "(RD)"}  # WARNING: Resource Intensive
-weather   = {icon = " ", name = "weather", color = "(BE)"} # Requires curl and an emoji font. | WARNING: Resource Intensive
+packages  = {icon = " ", name = "packages", color = "(RD)"}  # WARNING: Resource Intensive
+# weather   = {icon = " ", name = "weather", color = "(BE)"} # Requires curl and an emoji font. | WARNING: Resource Intensive
 gpu       = {icon = "󱔐 ", name = "gpu", color = "(MA)"}      # WARNING: Resource Intensive
 cpu       = {icon = " ", name = "cpu", color = "(RD)"}
 #battery   = {icon = " ", name = "battery", color = "(GN)"}

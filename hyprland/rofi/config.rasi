@@ -4,12 +4,12 @@
  *******************************************************/
 
 configuration {
-    font:   "Sans 16";
+    font:   "JetbrainsMono 16";
 
     modi: "run,drun,window";
     icon-theme: "Oranchelo";
     show-icons: true;
-    terminal: "wezterm";
+    terminal: "foot";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;

@@ -1,0 +1,16 @@
+background_opacity 0.8
+
+font_family     JetbrainsMono Nerd Font 
+bold_font       JetbrainsMono Nerd Font Medium
+italic_font     JetbrainsMono Nerd Font Regular
+bold_italic_font JetbrainsMono Nerd Font Medium
+font_size       16
+
+
+adjust_column_width  -1
+adjust_line_height   0
+copy_on_select yes
+
+cursor_shape block
+cursor_blink_interval 0
+shell_integration no-cursor

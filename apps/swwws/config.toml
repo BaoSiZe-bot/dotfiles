@@ -1,0 +1,21 @@
+[global]
+duration = "10m"
+sorting = "Ascending"
+transition_type = "center"
+transition_step = 90
+queue_size = 1000
+recursive = true
+
+# Monitor behavior: Independent, Synchronized, or Grouped
+monitor_behavior = "Synchronized"
+resize = "crop"
+
+# Shared path for all outputs
+[any]
+path = "/home/fujiwara/Wallpaper-Bank/wallpapers/"
+
+# Per-output overrides (optional)
+# [outputs."DP-1"]
+# path = "/different/path/for/this/monitor"
+# duration = "5m"
+# transition_type = "wipe"

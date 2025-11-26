@@ -8,10 +8,10 @@ let {
 
     $focused = {
       type = "focused"
-      show_icon = false
+      show_icon = true
       show_title = true
       icon_size = 24
-      icon_theme = "Tela-circle-nord"
+      icon_theme = "McMojave-circle-dark"
 
       truncate.mode = "end"
       truncate.max_length = 25
@@ -28,7 +28,7 @@ let {
       icons.pause = " "
       icons.prev = ""
       icons.next = ""
-      music_dir = "/home/noilinux/Music"
+      music_dir = "/home/fujiwara/Music"
     }
 
   $SysInfo = {
@@ -45,6 +45,7 @@ let {
       " {temp_c:coretemp-Package-id-0}°C"
       " {disk_free:/}GB"
      ]
+        on_click = "!foot -e /home/fujiwara/.cargo/bin/btm"
    }
 
     $cava = {
@@ -53,7 +54,7 @@ let {
         name = "cava"
         type = "script"
         mode = "watch"
-        cmd = "/home/noilinux/.config/ironbar/scripts/cava"
+        cmd = "/home/fujiwara/.config/ironbar/scripts/cava"
    }
     $volume = {
       type = "volume"
@@ -65,12 +66,12 @@ let {
       icons.muted = "󰝟 "
       on_scroll_down = "wpctl set-volume @DEFAULT_SINK@ 2%-"
       on_scroll_up = "wpctl set-volume @DEFAULT_SINK@ 2%+"
-      tooltip = "{{/home/noilinux/.config/ironbar/scripts/volume}}%"
+      tooltip = "{{/home/fujiwara/.config/ironbar/scripts/volume}}%"
     }
 
     $workspace = {
         type = "workspaces"
-        sort = "alphanumeric"
+        sort = "label"
         on_scroll_up = "hyprctl dispatch workspace -1"
         on_scroll_down = "hyprctl dispatch workspace +1"
     }
@@ -82,7 +83,7 @@ let {
                 name = "wlogout"
                 class = "wlogout"
                 label = ""
-                on_click = "!~/.config/ironbar/scripts/wlogout"
+                on_click = "!/home/fujiwara/.config/rofi/bin/rofi-powermenu"
             }
         ]
     }
@@ -95,7 +96,7 @@ let {
                 name = "work1"
                 class = "work1"
                 label = "1"
-                on_click = "!~/.config/ipc-scripts/work1.py"  
+                on_click = "!~/.config/ipc-scripts/work1.py"
                 on_scroll_up = "~/.config/ipc-scripts/wayfire_work_next.py"
                 on_scroll_down = "~/.config/ipc-scripts/wayfire_work_prev.py"
             }
@@ -216,7 +217,7 @@ let {
                 label = "9"
                 on_click = "!~/.config/ipc-scripts/work9.py"
                 on_scroll_up = "~/.config/ipc-scripts/wayfire_work_next.py"
-                on_scroll_down = "~/.config/ipc-scripts/wayfire_work_prev.py"               
+                on_scroll_down = "~/.config/ipc-scripts/wayfire_work_prev.py"
             }
         ]
     }
@@ -228,7 +229,7 @@ let {
                 type = "label"
                 name = "pacman"
                 class = "pacman"
-                label = " {{600000:checkupdates | wc -l}}"
+                label = " {{600000:apt list --installed | wc -l}}"
                 }
         ]
     }
@@ -260,19 +261,6 @@ let {
         cmd = "~/.config/ironbar/scripts/klayout.sh"
    }
 
-    $zellij = {
-        type = "custom"
-        bar = [
-            {
-                type = "button"
-                name = "zellij"
-                class = "zellij"
-                label = " "
-                on_click = "!~/.config/scripts/zellij.sh"
-            }
-        ]
-    }
-
    $airpod = {
        type = "custom"
        bar = [
@@ -301,13 +289,13 @@ let {
            }
        ]
    }
-   
+
     $start = [ $workspace $focused ]
     $center = [ $clock ]
-    $end = [ $tray $zellij $volume $pacman $SysInfo $wlogout ]
+    $end = [ $tray $volume $pacman $SysInfo $wlogout ]
 }
 in {
-        icon_theme = "McMojave-circle-purple-dark"
+        icon_theme = "McMojave-circle-dark"
         position = "top"
         start = $start
         center = $center

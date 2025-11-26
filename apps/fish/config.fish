@@ -1,11 +1,12 @@
-# cargo install vivid fd-find bat du-dust yazi-fm yazi-cli cargo-update cargo-about eza bottom gitui tlrc zellij viu nu nufmt
+# cargo install vivid fd-find bat du-dust yazi-fm yazi-cli cargo-update cargo-about eza bottom gitui tlrc zellij viu nu nufmt starship zoxide ripgrep
 # cargo install fish --tag 4.0.0
 # cargo install --git https://github.com/d1y/scls
 # cargo install --git https://github.com/wlh320/rime-ls
 # fish_config theme save "Catppuccin Frappe"
 # BUG: async prompt has a bug when i switch directory
 set fish_greeting
-set -gx PATH ~/.bin ~/.local/bin ~/.cargo/bin $PATH
+set -gx HELIX_RUNTIME ~/softwares/helix/runtime/
+set -gx PATH ~/.config/doomemacs/bin ~/.bin ~/.local/bin ~/.cargo/bin ~/.local/share/lvim/mason/bin $PATH
 set -gx LS_COLORS $(vivid generate catppuccin-frappe)
 set -gx MANPAGER "bat"
 # set -gx LESS_TERMCAP_mb '\e[1;31m'      # begin bold
@@ -16,15 +17,14 @@ set -gx MANPAGER "bat"
 # set -gx LESS_TERMCAP_se '\e[0m'         # reset reverse video
 # set -gx LESS_TERMCAP_ue '\e[0m'         # reset underline
 set -gx GROFF_NO_SGR 1                   # for konsole
-set -gx SHELL fish
 set -gx EDITOR nvim
 set -gx MYVIMDIR .vim
 abbr -a -- c 'clear; catnap'
-abbr -a -- fd 'fd -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=f | fzy -l 20'
-abbr -a -- Z 'cd $(fd -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=d | fzy -l 20)'
-abbr -a -- oe 'xdg-open $(fd -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=f | fzy -l 20)'
-abbr -a -- ee '$EDITOR $(fd -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=f | fzy -l 20)'
-abbr -a -- hs 'history | fzy -l 20)'
+abbr -a -- fd 'fd -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=f | tv'
+abbr -a -- Z 'cd $(fd -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=d | tv)'
+abbr -a -- oe 'xdg-open $(fd -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=f | tv)'
+abbr -a -- ee '$EDITOR $(fd -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=f | tv)'
+abbr -a -- hs 'history | tv'
 abbr -a -- p 'paru'
 abbr -a -- ps 'paru -S'
 abbr -a -- pl 'paru -Ql'
@@ -59,65 +59,20 @@ abbr -a -- T3 'eza --tree --color=always --level=3'
 abbr -a -- t1 'eza --icons=always --tree --color=always --level=1'
 abbr -a -- t2 'eza --icons=always --tree --color=always --level=2'
 abbr -a -- t3 'eza --icons=always --tree --color=always --level=3'
-function fzy_key_bindings # edit from fzf
-
-  function __fzy_parse_commandline -d 'Parse the current command line token and return split of existing filepath, fzy query, and optional -option= prefix'
-    set -l dir '.'
-    set -l query
-    set -l commandline (commandline -t | string unescape -n)
-    set -l prefix (string match -r -- '^-[^\s=]+=' $commandline)
-    set commandline (string replace -- "$prefix" '' $commandline)
-    set commandline (string replace -r -- '^~/' '\$HOME/' $commandline)
-    set commandline (string escape -n -- $commandline)
-    set commandline (string replace -r -a -- '\\\\\$(?=[\w])' '\$' $commandline)
-    eval set commandline $commandline
-    set commandline (string replace -r -a -- '/+' '/' $commandline)
-    if test -n "$commandline"
-      set dir (string replace -r -- '(?<!^)/$' '' $commandline)
-      while not test -d "$dir"
-        set dir (dirname -- $dir)
-      end
-      if test "$dir" = '.'; and test (string sub -l 2 -- $commandline) != './'
-        set fzy_query $commandline
-      else
-        set fzy_query (string replace -r -- "^$dir/?" '' $commandline)
-      end
-    end
-    string escape -n -- "$dir" "$fzy_query" "$prefix"
-  end
-  function fzy-file-widget -d "List files and folders"
-    set -l commandline (__fzy_parse_commandline)
-    set -l prefix $commandline[3]
-    if set -l result (eval fd -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=f | fzy -l 20)
-       commandline -t ''
-      for i in $result
-        commandline -it -- $prefix(string escape -- $i)' '
-      end
-    end
-    commandline -f repaint
-  end
-  function fzy-history-widget -d "Show command history"
-    set -l result (eval builtin history | command perl -0 -pe 's/^/$.\t/g; s/\n/\n\t/gm' | fzy)
-    and commandline -- $result
-    commandline -f repaint
-  end
-  function fzy-cd-widget -d "Change directory"
-    set -l commandline (__fzy_parse_commandline)
-    set -l prefix $commandline[3]
-    if set -l result (eval fd -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=d | fzy -l 20)
-      cd -- $result
-      commandline -rt -- $prefix
-    end
-    commandline -f repaint
-  end
-  bind \cr fzy-history-widget
-  bind -M insert \cr fzy-history-widget
-  bind \ct fzy-file-widget
-  bind -M insert \ct fzy-file-widget
-  bind \ec fzy-cd-widget
-  bind -M insert \ec fzy-cd-widget
-end
+abbr -a -- lvim 'NVIM_APPNAME=lvim nvim'
 starship init fish | source
 zoxide init fish | source
-fzy_key_bindings
+tv init fish | source
+
+# thefuck --alias | source
 # catnap
+
+set -gx FZF_DEFAULT_OPTS "\
+--color=bg+:#414559,bg:#303446,spinner:#F2D5CF,hl:#E78284 \
+--color=fg:#C6D0F5,header:#E78284,info:#CA9EE6,pointer:#F2D5CF \
+--color=marker:#BABBF1,fg+:#C6D0F5,prompt:#CA9EE6,hl+:#E78284 \
+--color=selected-bg:#51576D \
+--color=border:#737994,label:#C6D0F5"
+
+fnm env --use-on-cd --shell fish | source
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

@@ -182,7 +182,7 @@ end
 local M = {}
 M.apply = function(c)
 	c.leader = {
-		key = "s",
+		key = "g",
 		mods = "CTRL",
 		timeout_milliseconds = math.maxinteger,
 	}

@@ -13,4 +13,44 @@
       </metadata>
     </info>
   </bookmark>
+  <bookmark href="ftp://cj2024@172.40.25.177/" added="2025-10-03T23:31:51.377251Z" modified="2025-10-03T23:31:51.377255Z" visited="2025-10-03T23:31:51.377252Z">
+    <title>/ on 172.40.25.177</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2025-10-03T23:31:51.377253Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="ftp://2025@172.40.25.177/" added="2025-10-04T03:50:27.837298Z" modified="2025-10-04T23:24:16.805703Z" visited="2025-10-04T23:24:16.805701Z">
+    <title>/ on 172.40.25.177</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2025-10-04T23:24:16.805702Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="ftp://cjoier@172.40.24.229/" added="2025-10-08T02:52:37.249325Z" modified="2025-10-08T02:52:37.249330Z" visited="2025-10-08T02:52:37.249326Z">
+    <title>/ on 172.40.24.229</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2025-10-08T02:52:37.249328Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="ftp://cjoier@172.40.26.155/" added="2025-10-20T23:23:05.491773Z" modified="2025-10-20T23:23:05.491777Z" visited="2025-10-20T23:23:05.491774Z">
+    <title>/ on 172.40.26.155</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2025-10-20T23:23:05.491775Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
 </xbel>
