@@ -5,11 +5,5 @@ source=~/.config/hypr/conf.d/exec.conf
 source=~/.config/hypr/conf.d/keybind.conf
 source=~/.config/hypr/conf.d/rules.conf
 source=~/.config/hypr/conf.d/custom.conf
-source=~/.config/hypr/conf.d/plugins.conf
 
 source = ./dms/cursor.conf
-source = ./dms/binds.conf
-
-source = ./dms/windowrules.conf
-
-source = ./dms/outputs.conf

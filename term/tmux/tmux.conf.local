@@ -8,14 +8,40 @@ tmux_conf_update_plugins_on_launch=false
 tmux_conf_update_plugins_on_reload=false
 
 set -g @plugin 'catppuccin/tmux'
-set -g @plugin 'niksingh710/minimal-tmux-status'
+# set -g @plugin 'niksingh710/minimal-tmux-status'
 
-set -g @minimal-tmux-status "top"
+# set -g @minimal-tmux-status "top"
 
 set -g @catppuccin_pane_border_style "fg=#f5c2e7"
 set -g @catppuccin_pane_active_border_style "fg=#f5c2e7"
 set -g @catppuccin_status_background "#181825"
-set -g @minimal-tmux-bg "#f38ba8"
+# set -g @minimal-tmux-bg "#f38ba8"
+
+# --- SPLITS ---
+bind | split-window -h -c "#{pane_current_path}"
+bind - split-window -v -c "#{pane_current_path}"
+
+# --- STATUS BAR ---
+set -g status-position top
+set -g status-interval 1
+set -g status-style "bg=default,fg=white"
+set -g status-left-length 100
+set -g status-right-length 100
+
+# LEFT SIDE
+set -g status-left "#[bg=default]#{?client_prefix,#[fg=yellow],#[fg=brightblack]}\
+#{?client_prefix,#[fg=black]#[bg=yellow]󰌌 ,#[fg=brightwhite]#[bg=brightblack]❐ }#S "
+
+# RIGHT SIDE
+set -g status-right "#[fg=blue,bg=default,bold]   \
+#[fg=white,bg=default,bold]#{s|$HOME|~|:pane_current_path} "
+
+# WINDOWS
+bind c new-window -c "#{pane_current_path}"
+set -g window-status-separator ""
+set -g window-status-format "#[fg=blue,bg=default] #I #W "
+set -g window-status-current-format "#[fg=black,bg=blue,bold] #I #W \
+#[fg=blue,bg=default]#{?#{==:#{window_index},#{session_windows}},,}"
 
 set -g window-style 'fg=#f5c2e7'
 set -g window-active-style 'fg=#f5c2e7'

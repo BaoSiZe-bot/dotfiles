@@ -53,4 +53,14 @@
       </metadata>
     </info>
   </bookmark>
+  <bookmark href="ftp://ceoier@172.40.25.177/" added="2026-02-24T08:43:06.615600Z" modified="2026-02-24T08:43:06.615603Z" visited="2026-02-24T08:43:06.615601Z">
+    <title>172.40.25.177 の / (ルート)</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2026-02-24T08:43:06.615602Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
 </xbel>
