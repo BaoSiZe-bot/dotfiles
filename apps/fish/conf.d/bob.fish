@@ -1,1 +1,1 @@
-source "/home/fujiwara/.local/share/bob/env/env.fish"
+source "/home/noilinux/.local/share/bob/env/env.fish"

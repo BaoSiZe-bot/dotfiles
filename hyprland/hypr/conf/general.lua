@@ -1,0 +1,92 @@
+hl.monitor({
+  output = "Virtual-1",
+  mode = "1920x1080@60",
+  position = "1920x0",
+  scale = 1,
+  mirror = "eDP-1",
+})
+
+local colors = require('themes.frappe')
+
+hl.config({ binds = {
+    allow_workspace_cycles = true
+  },
+  general = {
+    gaps_in = 6.18,
+    gaps_out = 10,
+    border_size = 4,
+    col = {
+      active_border = colors.pink,
+      inactive_border = colors.surface0,
+    },
+    -- layout = "scrolling",
+    allow_tearing = false
+  },
+  dwindle = {
+    preserve_split = true
+  },
+  master = {
+    new_status = "master"
+  },
+  decoration = {
+    rounding = 10,
+    blur = {
+      enabled = true,
+      xray = false,
+      special = false,
+      new_optimizations = true,
+      size = 2,
+      passes = 2,
+      brightness = 1.2,
+      noise = 0.117,
+      contrast = 0.8916,
+      popups = true,
+      vibrancy_darkness = 0.8,
+      popups_ignorealpha = 0.6,
+      input_methods = true,
+      input_methods_ignorealpha = 0.6,
+    },
+    dim_inactive = false,
+    dim_strength = 0.1,
+    dim_special = 0
+  },
+  animations = {
+    enabled = true,
+  },
+  misc = {
+    vrr = 1,
+    focus_on_activate = true,
+    animate_manual_resizes = false,
+    enable_swallow = false,
+    swallow_regex = "(foot|kitty|alacritty|Alacritty)",
+    disable_hyprland_logo = true,
+    force_default_wallpaper = 0
+  }
+})
+
+hl.curve("linear",          { type = "bezier", points = { {0, 0},     {1, 1}     } })
+hl.curve("md3_standard",    { type = "bezier", points = { {0.2, 0},   {0, 1}     } })
+hl.curve("md3_decel",       { type = "bezier", points = { {0.05, 0.7},{0.1, 1}   } })
+hl.curve("md3_accel",       { type = "bezier", points = { {0.3, 0},   {0.8, 0.15}} })
+hl.curve("overshot",        { type = "bezier", points = { {0.05, 0.9},{0.1, 1.1} } })
+hl.curve("crazyshot",       { type = "bezier", points = { {0.1, 1.5}, {0.76, 0.92}}})
+hl.curve("hyprnostretch",   { type = "bezier", points = { {0.05, 0.9},{0.1, 1.0} } })
+hl.curve("menu_decel",      { type = "bezier", points = { {0.1, 1},   {0, 1}     } })
+hl.curve("menu_accel",      { type = "bezier", points = { {0.38, 0.04},{1, 0.07} } })
+hl.curve("easeInOutCirc",   { type = "bezier", points = { {0.85, 0},  {0.15, 1}  } })
+hl.curve("easeOutCirc",     { type = "bezier", points = { {0, 0.55},  {0.45, 1}  } })
+hl.curve("easeOutExpo",     { type = "bezier", points = { {0.16, 1},  {0.3, 1}   } })
+hl.curve("softAcDecel",     { type = "bezier", points = { {0.26, 0.26},{0.15, 1} } })
+hl.curve("md2",             { type = "bezier", points = { {0.4, 0},   {0.2, 1}   } })
+
+hl.animation({ leaf = "windows",          enabled = true,  speed = 3,   bezier = "md3_decel",  style = "popin 60%" })
+hl.animation({ leaf = "windowsIn",        enabled = true,  speed = 3,   bezier = "md3_decel",  style = "popin 60%" })
+hl.animation({ leaf = "windowsOut",       enabled = true,  speed = 3,   bezier = "md3_accel",  style = "popin 60%" })
+hl.animation({ leaf = "border",           enabled = true,  speed = 10,  bezier = "default" })
+hl.animation({ leaf = "fade",             enabled = true,  speed = 3,   bezier = "md3_decel" })
+hl.animation({ leaf = "layersIn",         enabled = true,  speed = 3,   bezier = "menu_decel", style = "slide" })
+hl.animation({ leaf = "layersOut",        enabled = true,  speed = 1.6, bezier = "menu_accel" })
+hl.animation({ leaf = "fadeLayersIn",     enabled = true,  speed = 3,   bezier = "menu_decel" })
+hl.animation({ leaf = "fadeLayersOut",    enabled = true,  speed = 1.6, bezier = "menu_accel" })
+hl.animation({ leaf = "workspaces",       enabled = true,  speed = 7,   bezier = "menu_decel", style = "slide" })
+hl.animation({ leaf = "specialWorkspace", enabled = true,  speed = 3,   bezier = "md3_decel",  style = "slidevert" })

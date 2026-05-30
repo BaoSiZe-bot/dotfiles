@@ -30,10 +30,12 @@ $env.SHELL = "nu"
 use std/util "path add"
 path add "~/.local/bin"
 path add "~/.cargo/bin"
+path add "~/software/luals/bin"
 path add "~/.bin"
 path add "~/.config/doomemacs/bin"
 path add "~/.local/share/lvim/mason/bin"
 path add "/home/linuxbrew/.linuxbrew/bin"
+path add "/home/noilinux/.nimble/bin"
 def ff [] { ~/.cargo/bin/fd -H --no-ignore --no-ignore-parent --no-ignore-vcs -t=f | fzy -l 20 }
 alias Z = cd (ff)
 alias oe = xdg-open (ff)

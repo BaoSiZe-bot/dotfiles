@@ -7,7 +7,7 @@ configuration {
     font:   "JetbrainsMono 16";
 
     modi: "run,drun,window";
-    icon-theme: "Oranchelo";
+    icon-theme: "McMojave-circle-blue";
     show-icons: true;
     terminal: "foot";
     drun-display-format: "{icon} {name}";
