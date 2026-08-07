@@ -9,3 +9,4 @@ require("dms.cursor")
 require("dms.binds")
 
 require("dms.binds-user")
+require("dms.layout")
