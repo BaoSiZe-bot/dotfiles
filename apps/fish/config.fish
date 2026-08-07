@@ -6,7 +6,7 @@
 # BUG: async prompt has a bug when i switch directory
 set fish_greeting
 set -gx HELIX_RUNTIME ~/softwares/helix/runtime/
-set -gx PATH ~/software/luals/bin ~/.config/doomemacs/bin ~/.bin ~/.local/bin ~/.cargo/bin ~/.local/share/lvim/mason/bin $PATH
+set -gx PATH ~/software/luals/bin ~/.config/emacs/bin ~/.config/doomemacs/bin ~/.bin ~/.local/bin ~/.cargo/bin ~/.local/share/lvim/mason/bin $PATH
 set -gx LS_COLORS $(vivid generate catppuccin-frappe)
 set -gx MANPAGER "bat"
 # set -gx LESS_TERMCAP_mb '\e[1;31m'      # begin bold
