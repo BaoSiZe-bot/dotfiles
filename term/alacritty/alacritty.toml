@@ -7,9 +7,9 @@ opacity = 0.8
 
 [font]
 size = 14
-normal = { family = "JetbrainsMono Nerd Font" }
-bold = { family = "JetbrainsMono Nerd Font" }
-italic = { family = "JetbrainsMono Nerd Font" }
+normal = { family = "ComicShannsMono Nerd Font" }
+bold = { family = "ComicShannsMono Nerd Font" }
+italic = { family = "ComicShannsMono Nerd Font" }
 
 [mouse]
 hide_when_typing = true

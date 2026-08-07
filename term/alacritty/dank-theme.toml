@@ -21,7 +21,7 @@ cyan    = '#f5c2e7'
 white   = '#ffeffa'
 
 [colors.bright]
-black   = '#9f939b'
+black   = '#6d646b'
 red     = '#ff9fa7'
 green   = '#bfffa5'
 yellow  = '#ffeba5'
