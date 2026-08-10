@@ -1,11 +1,3 @@
-hl.monitor({
-  output = "Virtual-1",
-  mode = "1920x1080@60",
-  position = "1920x0",
-  scale = 1,
-  mirror = "eDP-1",
-})
-
 local colors = require('themes.frappe')
 
 hl.config({ binds = {

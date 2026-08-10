@@ -10,3 +10,5 @@ require("dms.binds")
 
 require("dms.binds-user")
 require("dms.layout")
+require("dms.windowrules")
+require("dms.outputs")
