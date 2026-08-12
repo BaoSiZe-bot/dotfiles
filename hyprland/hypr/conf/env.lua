@@ -1,3 +1,4 @@
+hl.env("PATH", "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/run/user/1000/fnm_multishells/33955_1786435330488/bin:/home/noilinux/software/luals/bin:/home/noilinux/.config/emacs/bin:/home/noilinux/.config/doomemacs/bin:/home/noilinux/.bin:/home/noilinux/.local/bin:/home/noilinux/.cargo/bin:/home/noilinux/.local/share/lvim/mason/bin:/home/noilinux/go/bin:/run/user/1000/fnm_multishells/33916_1786435330440/bin:/home/noilinux/.local/share/fnm:/home/noilinux/.local/share/bob/nvim-bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/bin:/snap/bin:/usr/local/arbiter/local")
 hl.env("GTK_BACKEND","wayland,x11,*")
 hl.env("CLUTTER_BACKEND","wayland")
 hl.env("QT_AUTO_SCREEN_SCALE_FACTOR","1")
