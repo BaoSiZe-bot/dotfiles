@@ -1,12 +1,10 @@
 local colors = require('themes.frappe')
 
-hl.config({ binds = {
+hl.config({
+  binds = {
     allow_workspace_cycles = true
   },
   general = {
-    gaps_in = 6.18,
-    gaps_out = 10,
-    border_size = 4,
     col = {
       active_border = colors.pink,
       inactive_border = colors.surface0,
@@ -21,7 +19,6 @@ hl.config({ binds = {
     new_status = "master"
   },
   decoration = {
-    rounding = 10,
     blur = {
       enabled = true,
       xray = false,
